@@ -1,2 +1,0 @@
-/usr/bin/ar qc /opt/openframeworks/addons/ofxCMake/libs/libofxPSMove.a  CMakeFiles/ofxPSMove.dir/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveEvent.cpp.o CMakeFiles/ofxPSMove.dir/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.cpp.o
-/usr/bin/ranlib /opt/openframeworks/addons/ofxCMake/libs/libofxPSMove.a
