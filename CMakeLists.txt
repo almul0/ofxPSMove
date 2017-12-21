@@ -5,13 +5,13 @@
 # ===================== CMake Settings ===================
 # ========================================================
 cmake_minimum_required( VERSION 3.3 )
-project( ofxPSMoveDev )
+project( PSMoveExample )
 
 # ========================================================
 # ===================== User Settings ====================
 # ========================================================
 # ---------------------- App name  -----------------------
-set( APP_NAME   ofxPSMoveDev )
+set( APP_NAME   PSMoveExample )
 
 # ------------------------ OF Path -----------------------
 # --- If outside the OF structure, set an absolute OF path
@@ -33,14 +33,15 @@ set( OFX_ADDONS_ACTIVE
         #        ofxThreadedImageLoader
         #        ofxAssimpModelLoader
         #        ofxKinect
-        ofxOpenCv
+                ofxOpenCv
         #        ofxSvg
         #        ofxEmscripten (untested)
-        ofxPSMove
-        )
+                ofxPSMove
+                )
 
 # =========================================================================
 # ============================== OpenFrameworks ===========================
 # =========================================================================
 include( ${OF_DIRECTORY_BY_USER}/addons/ofxCMake/modules/main.cmake )
 # =========================================================================
+
