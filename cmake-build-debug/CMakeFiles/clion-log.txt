@@ -1,0 +1,38 @@
+/opt/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/almul0/Projects/ofxPSMove
+-- ofxOpenCv activated
+-- ofxPSMove activated
+-- Checking for module 'gstreamer-1.0 >= '
+--   Found gstreamer-1.0 , version 1.12.3
+-- Checking for module 'gstreamer-base-1.0 >= '
+--   Found gstreamer-base-1.0 , version 1.12.3
+-- Checking for module 'gstreamer-app-1.0 >= '
+--   Found gstreamer-app-1.0 , version 1.12.3
+-- Checking for module 'gstreamer-audio-1.0 >= '
+--   Found gstreamer-audio-1.0 , version 1.12.3
+-- Checking for module 'gstreamer-fft-1.0 >= '
+--   Found gstreamer-fft-1.0 , version 1.12.3
+-- Checking for module 'gstreamer-gl-1.0>=1.5.0'
+--   No package 'gstreamer-gl-1.0' found
+-- Checking for module 'gstreamer-mpegts-1.0>=1.4.0'
+--   No package 'gstreamer-mpegts-1.0' found
+-- Checking for module 'gstreamer-pbutils-1.0 >= '
+--   Found gstreamer-pbutils-1.0 , version 1.12.3
+-- Checking for module 'gstreamer-tag-1.0 >= '
+--   Found gstreamer-tag-1.0 , version 1.12.3
+-- Checking for module 'gstreamer-video-1.0 >= '
+--   Found gstreamer-video-1.0 , version 1.12.3
+-- Configuring done
+CMake Error at /opt/openframeworks/addons/ofxCMake/modules/configLinux.cmake:8 (add_executable):
+  Cannot find source file:
+
+    src/main.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+Call Stack (most recent call first):
+  /opt/openframeworks/addons/ofxCMake/modules/main.cmake:52 (include)
+  CMakeLists.txt:45 (include)
+
+
+-- Generating done
+-- Build files have been written to: /home/almul0/Projects/ofxPSMove/cmake-build-debug

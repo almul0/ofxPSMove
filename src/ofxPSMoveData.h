@@ -10,7 +10,8 @@ namespace ofxPSMove {
 	class Data
 	{
 	public:
-		ofVec3f accelerometer , gyroscope , magnetometer;
+		ofVec3f accelerometer , gyroscope , magnetometer, position;
+        ofVec4f orientation;
 		bool BTN_TRIANGLE
 		,BTN_CIRCLE
 		,BTN_CROSS

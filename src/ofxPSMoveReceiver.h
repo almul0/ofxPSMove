@@ -33,6 +33,7 @@
 #include <iostream>
 #include "psmove.h"
 #include "psmove_tracker.h"
+#include "psmove_fusion.h"
 #include "ofMain.h"
 #include "ofxOpenCv.h"
 #include "ofxPSMoveEvent.h"
@@ -57,6 +58,9 @@ namespace ofxPSMove {
 		int count;
 		enum PSMove_Connection_Type ctype;
 		vector<ofxPSMove::Data> psmoveData;
+		PSMoveTrackerSettings settings;
+		PSMoveTracker* tracker;
+        	PSMoveFusion *fusion;
 		
 	};
 }

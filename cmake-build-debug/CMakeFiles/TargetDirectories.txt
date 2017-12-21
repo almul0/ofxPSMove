@@ -1,0 +1,8 @@
+/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/of_shared.dir
+/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/ofxPSMoveDev.dir
+/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/of_static.dir
+/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir
+/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/ofxPSMove.dir
+/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/ofxOpenCv.dir

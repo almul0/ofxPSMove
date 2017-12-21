@@ -53,6 +53,8 @@ namespace ofxPSMove {
 		ofEvent<EventArgs> buttonMoveReleased;
 		ofEvent<EventArgs> buttonTReleased;
 		ofEvent<EventArgs> buttonPSReleased;
+
+		ofEvent<EventArgs> moved;
         
     };
     
@@ -88,6 +90,7 @@ void ofxAddPSMoveListeners( ListenerClass * listener ){
 	ofAddListener(ofxPSMove::Events().accelerometerUpdated, listener, &ListenerClass::onAccelerometerUpdated);
 	ofAddListener(ofxPSMove::Events().gyroscopeUpdated, listener, &ListenerClass::onGyroscopeUpdated);
 	ofAddListener(ofxPSMove::Events().magnetometerUpdated, listener, &ListenerClass::onMagnetometerUpdated);
+	ofAddListener(ofxPSMove::Events().moved, listener, &ListenerClass::onPSMoved);
 }
 
 template<class ListenerClass>
@@ -119,6 +122,8 @@ void ofxRemovePSMoveListeners( ListenerClass * listener ){
 	ofRemoveListener(ofxPSMove::Events().accelerometerUpdated, listener, &ListenerClass::onAccelerometerUpdated);
 	ofRemoveListener(ofxPSMove::Events().gyroscopeUpdated, listener, &ListenerClass::onGyroscopeUpdated);
 	ofRemoveListener(ofxPSMove::Events().magnetometerUpdated, listener, &ListenerClass::onMagnetometerUpdated);
+
+	ofRemoveListener(ofxPSMove::Events().moved, listener, &ListenerClass::onPSmoved);
 	
 
 }

@@ -1,0 +1,1484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ofxPSMoveDev"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\opt\;CMake Files\..\..\..\..\opt\openframeworks\;CMake Files\..\..\..\..\opt\openframeworks\addons\;CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\;CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\;CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\addOns\;CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\addOns\internal\;CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\addOns\external\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\share\;CMake Files\..\..\..\..\usr\share\OpenCV\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="of_shared">
+				<Option output="/home/almul0/Projects/ofxPSMove/bin/ofxPSMoveDev.app/Contents/Frameworks/libopenFrameworksShared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 of_shared"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="of_shared/fast">
+				<Option output="/home/almul0/Projects/ofxPSMove/bin/ofxPSMoveDev.app/Contents/Frameworks/libopenFrameworksShared.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 of_shared/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ofxPSMoveDev">
+				<Option output="/home/almul0/Projects/ofxPSMove/bin/ofxPSMoveDev" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 ofxPSMoveDev"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ofxPSMoveDev/fast">
+				<Option output="/home/almul0/Projects/ofxPSMove/bin/ofxPSMoveDev" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 ofxPSMoveDev/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="of_static">
+				<Option output="/home/almul0/Projects/ofxPSMove/cmake-build-debug/libopenFrameworksStatic.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 of_static"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="of_static/fast">
+				<Option output="/home/almul0/Projects/ofxPSMove/cmake-build-debug/libopenFrameworksStatic.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 of_static/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="core">
+				<Option output="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/core.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 core"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="core/fast">
+				<Option output="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/core.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 core/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ofxPSMove">
+				<Option output="/opt/openframeworks/addons/ofxCMake/libs/libofxPSMove.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 ofxPSMove"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ofxPSMove/fast">
+				<Option output="/opt/openframeworks/addons/ofxCMake/libs/libofxPSMove.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/opencv"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 ofxPSMove/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ofxOpenCv">
+				<Option output="/opt/openframeworks/addons/ofxCMake/libs/libofxOpenCv.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 ofxOpenCv"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ofxOpenCv/fast">
+				<Option output="/opt/openframeworks/addons/ofxCMake/libs/libofxOpenCv.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/almul0/Projects/ofxPSMove/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include"/>
+					<Add directory="/opt/openframeworks/addons/ofxOpenCv/libs/opencv/include/opencv"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/src"/>
+					<Add directory="/opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include"/>
+					<Add directory="/usr/include/cairo"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/pixman-1"/>
+					<Add directory="/usr/include/freetype2"/>
+					<Add directory="/usr/include/libpng16"/>
+					<Add directory="/usr/include/alsa"/>
+					<Add directory="/usr/include/gstreamer-1.0"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/3d"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/app"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/communication"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/events"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/gl"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/graphics"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/math"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/sound"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/types"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/utils"/>
+					<Add directory="/opt/openframeworks/libs/openFrameworks/video"/>
+					<Add directory="/opt/openframeworks/libs/poco/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include"/>
+					<Add directory="/opt/openframeworks/libs/freetype/include/freetype2"/>
+					<Add directory="/opt/openframeworks/libs/fmodex/include"/>
+					<Add directory="/opt/openframeworks/libs/FreeImage/include"/>
+					<Add directory="/opt/openframeworks/libs/tess2/include"/>
+					<Add directory="/opt/openframeworks/libs/glfw/include"/>
+					<Add directory="/opt/openframeworks/libs/utf8/include"/>
+					<Add directory="/opt/openframeworks/libs/json/include"/>
+					<Add directory="/opt/openframeworks/libs/kiss/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 ofxOpenCv/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/almul0/Projects/ofxPSMove/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/3d/of3dPrimitives.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/3d/of3dUtils.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/3d/ofCamera.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/3d/ofEasyCam.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/3d/ofNode.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/app/ofAppGLFWWindow.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/app/ofAppGlutWindow.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/app/ofAppNoWindow.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/app/ofAppRunner.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/app/ofMainLoop.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/communication/ofArduino.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/communication/ofSerial.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/events/ofEvents.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofBufferObject.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofFbo.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofGLProgrammableRenderer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofGLRenderer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofGLUtils.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofLight.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofMaterial.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofShader.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofTexture.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofVbo.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/gl/ofVboMesh.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/of3dGraphics.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofBitmapFont.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofCairoRenderer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofGraphics.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofImage.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofPath.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofPixels.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofRendererCollection.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofTessellator.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/graphics/ofTrueTypeFont.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/math/ofMath.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/math/ofMatrix3x3.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/math/ofMatrix4x4.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/math/ofQuaternion.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/math/ofVec2f.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/math/ofVec4f.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/sound/ofFmodSoundPlayer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/sound/ofOpenALSoundPlayer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/sound/ofSoundBuffer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/sound/ofSoundPlayer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/types/ofBaseTypes.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/types/ofColor.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/types/ofParameter.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/types/ofParameterGroup.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/types/ofRectangle.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofFileUtils.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofFpsCounter.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofLog.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofMatrixStack.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofSystemUtils.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofThread.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofTimer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofURLFileLoader.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofUtils.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/utils/ofXml.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/video/ofGstUtils.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/video/ofGstVideoGrabber.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/video/ofGstVideoPlayer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/video/ofVideoGrabber.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/cmake-build-debug/CMakeFiles/core.dir/opt/openframeworks/libs/openFrameworks/video/ofVideoPlayer.cpp.o">
+			<Option target="of_shared"/>
+			<Option target="of_static"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvColorImage.cpp">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvColorImage.h">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvContourFinder.cpp">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvContourFinder.h">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvFloatImage.cpp">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvFloatImage.h">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvGrayscaleImage.cpp">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvGrayscaleImage.h">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvHaarFinder.cpp">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvHaarFinder.h">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvImage.cpp">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvImage.h">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvShortImage.cpp">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxOpenCv/src/ofxCvShortImage.h">
+			<Option target="ofxOpenCv"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveEvent.cpp">
+			<Option target="ofxPSMove"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveEvent.h">
+			<Option target="ofxPSMove"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.cpp">
+			<Option target="ofxPSMove"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.h">
+			<Option target="ofxPSMove"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/of3dPrimitives.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/of3dPrimitives.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/of3dUtils.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/of3dUtils.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/ofCamera.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/ofCamera.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/ofEasyCam.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/ofEasyCam.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/ofNode.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/3d/ofNode.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofAppGLFWWindow.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofAppGLFWWindow.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofAppGlutWindow.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofAppGlutWindow.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofAppNoWindow.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofAppNoWindow.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofAppRunner.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofAppRunner.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofMainLoop.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/app/ofMainLoop.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/communication/ofArduino.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/communication/ofArduino.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/communication/ofSerial.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/communication/ofSerial.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/events/ofEvents.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/events/ofEvents.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofBufferObject.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofBufferObject.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofFbo.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofFbo.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofGLProgrammableRenderer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofGLProgrammableRenderer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofGLRenderer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofGLRenderer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofGLUtils.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofGLUtils.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofLight.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofLight.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofMaterial.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofMaterial.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofShader.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofShader.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofTexture.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofTexture.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofVbo.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofVbo.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofVboMesh.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/gl/ofVboMesh.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/of3dGraphics.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/of3dGraphics.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofBitmapFont.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofBitmapFont.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofCairoRenderer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofCairoRenderer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofGraphics.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofGraphics.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofImage.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofImage.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofPath.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofPath.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofPixels.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofPixels.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofRendererCollection.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofRendererCollection.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofTessellator.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofTessellator.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofTrueTypeFont.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/graphics/ofTrueTypeFont.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofMath.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofMath.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofMatrix3x3.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofMatrix3x3.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofMatrix4x4.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofMatrix4x4.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofQuaternion.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofQuaternion.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofVec2f.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofVec2f.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofVec4f.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/math/ofVec4f.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/ofMain.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/sound/ofFmodSoundPlayer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/sound/ofFmodSoundPlayer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/sound/ofOpenALSoundPlayer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/sound/ofOpenALSoundPlayer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/sound/ofSoundBuffer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/sound/ofSoundBuffer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/sound/ofSoundPlayer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/sound/ofSoundPlayer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofBaseTypes.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofBaseTypes.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofColor.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofColor.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofParameter.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofParameter.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofParameterGroup.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofParameterGroup.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofRectangle.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/types/ofRectangle.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofFileUtils.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofFileUtils.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofFpsCounter.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofFpsCounter.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofLog.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofLog.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofMatrixStack.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofMatrixStack.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofSystemUtils.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofSystemUtils.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofThread.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofThread.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofTimer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofTimer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofURLFileLoader.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofURLFileLoader.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofUtils.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofUtils.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofXml.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/utils/ofXml.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofGstUtils.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofGstUtils.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofGstVideoGrabber.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofGstVideoGrabber.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofGstVideoPlayer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofGstVideoPlayer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofVideoGrabber.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofVideoGrabber.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofVideoPlayer.cpp">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/opt/openframeworks/libs/openFrameworks/video/ofVideoPlayer.h">
+			<Option target="core"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/modules/main.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/modules/addOns.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/modules/addOnsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/modules/openFrameworks.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/modules/openFrameworksLinux.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/modules/FindGStreamer.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/modules/config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/modules/configLinux.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\modules\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/addOns/internal/ofxOpenCv.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\addOns\internal\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../opt/openframeworks/addons/ofxCMake/addOns/external/ofxPSMove.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\opt\openframeworks\addons\ofxCMake\addOns\external\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../usr/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../usr/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../usr/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/almul0/Projects/ofxPSMove/../../../../usr/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\share\OpenCV\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
