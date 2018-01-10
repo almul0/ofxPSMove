@@ -35,11 +35,12 @@
 #include "psmove_tracker.h"
 #include "psmove_fusion.h"
 #include "ofMain.h"
+#include "ofThread.h"
 #include "ofxOpenCv.h"
 #include "ofxPSMoveEvent.h"
 #include "ofxPSMoveData.h"
 namespace ofxPSMove {
-	class Receiver
+	class Receiver : public ofThread
 	{
 	public:
 		Receiver();
@@ -48,6 +49,7 @@ namespace ofxPSMove {
 		void setup();
 		void enable();
 		void disable();
+		void threadedFunction();
 		void update(ofEventArgs & args);
 		void draw();
 		void setLedColor(int _id , int r , int g , int b);

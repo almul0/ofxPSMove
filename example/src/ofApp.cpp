@@ -5,6 +5,7 @@ void ofApp::setup(){
 	psMoveReceiver.setup();
 	ofxAddPSMoveListeners(this);
     psMoveReceiver.setLedColor(0, 255,0,0);
+    psMoveReceiver.startThread();
 
     right.load("./assets/right.jpg");
     lantern.load("./assets/reveal.png");
@@ -14,8 +15,13 @@ void ofApp::setup(){
 void ofApp::update(){
 
 }
-void ofApp::update(ofEventArgs & args){
-    psMoveReceiver.update(args);
+void ofApp::update(ofEventArgs & args) {
+    //psMoveReceiver.update(args);
+    if (psMoveReceiver.tryLock()) {
+        cursor.x = psMoveReceiver.cursorx;
+        cursor.y = psMoveReceiver.cursory;
+        psMoveReceiver.unlock();
+    }
     update();
 }
 
@@ -175,36 +181,12 @@ void ofApp::onPSMoved( ofxPSMove::EventArgs & psmoveEvent )
     /*ofLogNotice() << printf("PS Moved: (%.2f,%.2f,%.2f)",psmoveEvent.data->position.x,
                             psmoveEvent.data->position.y,
                             psmoveEvent.data->position.z);*/
-    double roll, pitch, yaw;
-    toEulerAngle(psmoveEvent.data->orientation, &roll, &pitch, &yaw);
-//    ofLogNotice() << printf("PS Moved Orientation: (%.2f,%.2f,%.2f,%.2f)", psmoveEvent.data->orientation.w,
-//                            psmoveEvent.data->orientation.x,
-//                            psmoveEvent.data->orientation.y,
-//                            psmoveEvent.data->orientation.z);
-    ofLogNotice() << printf("PS Moved Orientation: (%.2f,%.2f,%.2f)", roll*180/M_PI,
-                            pitch*180/M_PI,
-                            yaw*180/M_PI);
 
-    cursor.x = psmoveEvent.data->position.x;
-    cursor.y = psmoveEvent.data->position.y;
+
+    //cursor.x = psmoveEvent.data->position.x;
+    //cursor.y = psmoveEvent.data->position.y;
 }
 
-void ofApp::toEulerAngle(ofVec4f q, double* roll, double* pitch, double* yaw)
-{
-    // roll (x-axis rotation)
-    double sinr = +2.0 * (q.w * q.x + q.y * q.z);
-    double cosr = +1.0 - 2.0 * (q.x * q.x + q.y * q.y);
-    *roll = atan2(sinr, cosr);
-
-    // pitch (y-axis rotation)
-    double sinp = +2.0 * (q.w * q.y - q.z * q.x);
-    if (fabs(sinp) >= 1)
-        *pitch = copysign(M_PI / 2, sinp); // use 90 degrees if out of range
-    else
-        *pitch = asin(sinp);
-
-    // yaw (z-axis rotation)
-    double siny = +2.0 * (q.w * q.z + q.x * q.y);
-    double cosy = +1.0 - 2.0 * (q.y * q.y + q.z * q.z);
-    *yaw = atan2(siny, cosy);
+void ofApp::exit() {
+    psMoveReceiver.stopThread();
 }
