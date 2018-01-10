@@ -44,6 +44,7 @@ namespace ofxPSMove {
 	public:
 		Receiver();
 		~Receiver();
+		int cursorx, cursory;
 		void setup();
 		void enable();
 		void disable();
@@ -61,7 +62,11 @@ namespace ofxPSMove {
 		PSMoveTrackerSettings settings;
 		PSMoveTracker* tracker;
         	PSMoveFusion *fusion;
-		
+		bool getFrontIntersectionPoint(int move_id, float& xi, float& yi, float& zi );
+		bool LinePlaneIntersection(const ofVec3f& n, const ofVec3f& c, const ofVec3f& x0, const ofVec3f& v, ofVec3f& vecIntersection, float& flFraction);
+
+
+
 	};
 }
 #endif /* defined(__emptyExample__ofxPSMove__) */
