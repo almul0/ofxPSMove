@@ -1,5 +1,10 @@
 #include "ofApp.h"
 
+#include <iostream>
+#include <chrono>
+
+using namespace std;
+using namespace std::chrono;
 //--------------------------------------------------------------
 void ofApp::setup(){
 	psMoveReceiver.setup();
@@ -15,7 +20,19 @@ void ofApp::update(){
 
 }
 void ofApp::update(ofEventArgs & args){
-    psMoveReceiver.update(args);
+    if (ofGetFrameNum() % 60) {
+        high_resolution_clock::time_point t1 = high_resolution_clock::now();
+
+        psMoveReceiver.update(args);
+        cursor.x = psMoveReceiver.cursorx;
+        cursor.y = psMoveReceiver.cursory;
+
+        high_resolution_clock::time_point t2 = high_resolution_clock::now();
+
+        auto duration = duration_cast<microseconds>( t2 - t1 ).count();
+
+        printf("Duration: %lu\n",duration);
+    }
     update();
 }
 
@@ -40,7 +57,8 @@ void ofApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void ofApp::mouseMoved(int x, int y ){
-
+    //cursor.x = x;
+    //cursor.y = y;
 }
 
 //--------------------------------------------------------------
@@ -172,39 +190,10 @@ void ofApp::onTemperatureUpdated( ofxPSMove::EventArgs & psmoveEvent )
 
 void ofApp::onPSMoved( ofxPSMove::EventArgs & psmoveEvent )
 {
-    /*ofLogNotice() << printf("PS Moved: (%.2f,%.2f,%.2f)",psmoveEvent.data->position.x,
-                            psmoveEvent.data->position.y,
-                            psmoveEvent.data->position.z);*/
-    double roll, pitch, yaw;
-    toEulerAngle(psmoveEvent.data->orientation, &roll, &pitch, &yaw);
-//    ofLogNotice() << printf("PS Moved Orientation: (%.2f,%.2f,%.2f,%.2f)", psmoveEvent.data->orientation.w,
-//                            psmoveEvent.data->orientation.x,
-//                            psmoveEvent.data->orientation.y,
-//                            psmoveEvent.data->orientation.z);
-    ofLogNotice() << printf("PS Moved Orientation: (%.2f,%.2f,%.2f)", roll*180/M_PI,
-                            pitch*180/M_PI,
-                            yaw*180/M_PI);
+    //printf("PS Moved: (%.2f,%.2f)\n",psmoveEvent.data->position.x,
+     //                       psmoveEvent.data->position.y);
 
-    cursor.x = psmoveEvent.data->position.x;
-    cursor.y = psmoveEvent.data->position.y;
+    //cursor.x = psmoveEvent.data->position.x;
+    //cursor.y = psmoveEvent.data->position.y;
 }
 
-void ofApp::toEulerAngle(ofVec4f q, double* roll, double* pitch, double* yaw)
-{
-    // roll (x-axis rotation)
-    double sinr = +2.0 * (q.w * q.x + q.y * q.z);
-    double cosr = +1.0 - 2.0 * (q.x * q.x + q.y * q.y);
-    *roll = atan2(sinr, cosr);
-
-    // pitch (y-axis rotation)
-    double sinp = +2.0 * (q.w * q.y - q.z * q.x);
-    if (fabs(sinp) >= 1)
-        *pitch = copysign(M_PI / 2, sinp); // use 90 degrees if out of range
-    else
-        *pitch = asin(sinp);
-
-    // yaw (z-axis rotation)
-    double siny = +2.0 * (q.w * q.z + q.x * q.y);
-    double cosy = +1.0 - 2.0 * (q.y * q.y + q.z * q.z);
-    *yaw = atan2(siny, cosy);
-}

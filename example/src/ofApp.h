@@ -1,12 +1,15 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxPSMove.h"
+#include "../../src/ofxPSMove.h"
+
+
 class ofApp : public ofBaseApp{
 
 	public:
 		void setup();
 		void update();
+		void update(ofEventArgs & args);
 		void draw();
 
 		void keyPressed  (int key);
@@ -19,6 +22,10 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 	ofxPSMove::Receiver psMoveReceiver;
+
+    ofImage right;
+    ofImage lantern;
+    ofPoint cursor;
 	
 	
 	
@@ -49,4 +56,8 @@ class ofApp : public ofBaseApp{
 	void onAccelerometerUpdated( ofxPSMove::EventArgs & psmoveEvent );
 	void onGyroscopeUpdated ( ofxPSMove::EventArgs & psmoveEvent );
 	void onMagnetometerUpdated( ofxPSMove::EventArgs & psmoveEvent );
+    void onPSMoved( ofxPSMove::EventArgs & psmoveEvent );
+
+    void toEulerAngle(ofVec4f q, double* roll, double* pitch, double* yaw);
+
 };
