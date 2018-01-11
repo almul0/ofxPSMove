@@ -40,7 +40,7 @@
 #include "ofxPSMoveEvent.h"
 #include "ofxPSMoveData.h"
 namespace ofxPSMove {
-	class Receiver : public ofThread
+	class Receiver
 	{
 	public:
 		Receiver();
@@ -49,7 +49,6 @@ namespace ofxPSMove {
 		void setup();
 		void enable();
 		void disable();
-		void threadedFunction();
 		void update(ofEventArgs & args);
 		void draw();
 		void setLedColor(int _id , int r , int g , int b);

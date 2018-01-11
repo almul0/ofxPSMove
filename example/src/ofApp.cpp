@@ -3,8 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 	psMoveReceiver.setup();
-	//ofxAddPSMoveListeners(this);
-    psMoveReceiver.startThread();
+	ofxAddPSMoveListeners(this);
 
     right.load("./assets/right.jpg");
     lantern.load("./assets/reveal.png");
@@ -15,12 +14,7 @@ void ofApp::update(){
 
 }
 void ofApp::update(ofEventArgs & args) {
-    //psMoveReceiver.update(args);
-    if (psMoveReceiver.tryLock()) {
-        cursor.x = psMoveReceiver.cursorx;
-        cursor.y = psMoveReceiver.cursory;
-        psMoveReceiver.unlock();
-    }
+    psMoveReceiver.update(args);
     update();
 }
 
@@ -182,10 +176,10 @@ void ofApp::onPSMoved( ofxPSMove::EventArgs & psmoveEvent )
                             psmoveEvent.data->position.z);*/
 
 
-    //cursor.x = psmoveEvent.data->position.x;
-    //cursor.y = psmoveEvent.data->position.y;
+    cursor.x = psmoveEvent.data->position.x;
+    cursor.y = psmoveEvent.data->position.y;
 }
 
 void ofApp::exit() {
-    psMoveReceiver.stopThread();
+
 }
