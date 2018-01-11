@@ -98,14 +98,12 @@ namespace ofxPSMove {
             move[id] = psmove_connect_by_id(id);
 
 
-
             if (move[id] == NULL) {
                 ofLogError("ofxPSMoveReceiver") << "Could not connect to default Move controller.\n"
                         "Please connect one via USB or Bluetooth.";
 
                 bSetup[id] = false;
-            }
-            else {
+            } else {
                 int result;
                 for (;;) {
                     ofLogNotice("ofxPSMoveReceiver") << ("Calibrating controller %d...", id);
@@ -117,7 +115,7 @@ namespace ofxPSMove {
                                 psmove_tracker_get_auto_update_leds(tracker,
                                                                     move[id]);
                         ofLogNotice("ofxPSMoveReceiver") << ("OK, auto_update_leds is %s\n",
-                                (auto_update_leds == PSMove_True)?"enabled":"disabled");
+                                (auto_update_leds == PSMove_True) ? "enabled" : "disabled");
                         break;
                     } else {
                         ofLogNotice("ofxPSMoveReceiver") << "ERROR - retrying\n";
@@ -126,143 +124,146 @@ namespace ofxPSMove {
 
                 bSetup[id] = true;
             }
-            if(bSetup[id])
-            {
+            if (bSetup[id]) {
 
-            if(bSetup[id]) {
-                psmoveData[id].intrinsics = cv::cvarrToMat((CvMat*) cvLoad(psmove_util_get_file_path("intrinsics.xml"), 0, 0, 0));
+                if (bSetup[id]) {
+                    psmoveData[id].intrinsics = cv::cvarrToMat(
+                            (CvMat *) cvLoad(psmove_util_get_file_path("intrinsics.xml"), 0, 0, 0));
 
-                char *serial = psmove_get_serial(move[id]);
-                ofLogVerbose("ofxPSMoveReciver") <<"Serial: "<< serial;
-                free(serial);
+                    char *serial = psmove_get_serial(move[id]);
+                    ofLogVerbose("ofxPSMoveReciver") << "Serial: " << serial;
+                    free(serial);
 
-                ctype = psmove_connection_type(move[id]);
-                switch (ctype) {
-                    case Conn_USB:
-                        ofLogNotice("ofxPSMoveReceiver") <<"Connected via USB";
-                        break;
-                    case Conn_Bluetooth:
-                        ofLogNotice("ofxPSMoveReceiver") <<"Connected via Bluetooth.";
-                        break;
-                    case Conn_Unknown:
-                        ofLogNotice("ofxPSMoveReceiver") <<"Unknown connection type.";
-                        break;
+                    ctype = psmove_connection_type(move[id]);
+                    switch (ctype) {
+                        case Conn_USB:
+                            ofLogNotice("ofxPSMoveReceiver") << "Connected via USB";
+                            break;
+                        case Conn_Bluetooth:
+                            ofLogNotice("ofxPSMoveReceiver") << "Connected via Bluetooth.";
+                            break;
+                        case Conn_Unknown:
+                            ofLogNotice("ofxPSMoveReceiver") << "Unknown connection type.";
+                            break;
+                    }
+
+                    enum PSMove_Bool auto_update_leds =
+                            psmove_tracker_get_auto_update_leds(tracker,
+                                                                move[id]);
+                    ofLogNotice("ofxPSMoveReceiver") << ("OK, auto_update_leds is %s\n",
+                            (auto_update_leds == PSMove_True) ? "enabled" : "disabled");
+
+
+                    for (int i = 0; i < 10; i++) {
+                        psmove_set_rumble(move[id], 255 * (i % 2));
+                        usleep(10000 * (i % 10));
+                    }
+
+                    for (int i = 250; i >= 0; i -= 5) {
+                        psmove_set_rumble(move[id], 0);
+                    }
+
+                    /* Enable rate limiting for LED updates */
+                    //psmove_set_rate_limiting(move[id], PSMove_False);
+
+
+                    psmove_enable_orientation(move[id], PSMove_True);
+                    assert(psmove_has_orientation(move[id]));
+
+                    while (psmove_tracker_enable(tracker, move[id]) != Tracker_CALIBRATED);
+                    psmove_update_leds(move[id]);
+
+
+                    psmove_tracker_update_image(tracker);
+                    psmove_tracker_update(tracker, NULL);
+                    psmove_tracker_annotate(tracker);
+
+                    void *frame;
+                    frame = psmove_tracker_get_frame(tracker);
+                    if (frame) {
+                        cvShowImage("live camera feed", frame);
+                        cvWaitKey(1);
+                    }
+
+
+                    /*--------------------------------------------------------------------------------------*/
+                    /*----------------------------ALIGN POINTER TO CAMERA-----------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+
+                    ofLogNotice("ofxPSMoveReceiver") << "Center the move and press the move button\n";
+                    int buttons;
+                    while (!(buttons & Btn_MOVE)) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+                    while (buttons & Btn_MOVE) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+                    psmove_reset_orientation(move[id]);
+
+                    psmove_set_leds(move[id], PSMOVE_LED_R, PSMOVE_LED_G, PSMOVE_LED_B);
+                    psmove_update_leds(move[id]);
+                    float xi, yi, zi;
+                    ofLogNotice("ofxPSMoveReceiver") << "FRONT SCREEN: Point to upper left and press MOVE\n";
+                    buttons = 0;
+                    while (!(buttons & Btn_MOVE)) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+                    while (buttons & Btn_MOVE) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+
+                    getFrontIntersectionPoint(id, xi, yi, zi);
+                    psmoveData[id].p11 = ofVec3f(xi, yi, zi);
+
+                    psmove_update_leds(move[id]);
+
+                    printf("FRONT SCREEN: Point to bottom right and press MOVE\n");
+                    buttons = 0;
+                    while (!(buttons & Btn_MOVE)) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+                    while (buttons & Btn_MOVE) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+
+                    getFrontIntersectionPoint(id, xi, yi, zi);
+                    psmoveData[id].p12 = ofVec3f(xi, yi, zi);
+
+                    psmove_update_leds(move[id]);
+                    printf("Congratulations! You rocks! Very nice!\n");
+                    printf("P11:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].p11.x, psmoveData[id].p11.y,
+                           psmoveData[id].p11.z);
+                    printf("P12:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].p12.x, psmoveData[id].p12.y,
+                           psmoveData[id].p12.z);
+
+                    // These points are points of the right plane (P12) and the left plane (P11)
+
+
+
+                    /*--------------------------------------------------------------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+
+
                 }
-
-                enum PSMove_Bool auto_update_leds =
-                        psmove_tracker_get_auto_update_leds(tracker,
-                                                            move[id]);
-                ofLogNotice("ofxPSMoveReceiver") << ("OK, auto_update_leds is %s\n",
-                        (auto_update_leds == PSMove_True)?"enabled":"disabled");
-
-
-                for (int i=0; i<10; i++) {
-                    psmove_set_rumble(move[id], 255*(i%2));
-                    usleep(10000*(i%10));
-                }
-
-                for (int i=250; i>=0; i-=5) {
-                    psmove_set_rumble(move[id], 0);
-                }
-
-                /* Enable rate limiting for LED updates */
-                //psmove_set_rate_limiting(move[id], PSMove_False);
-
-
-                psmove_enable_orientation(move[id], PSMove_True);
-                assert(psmove_has_orientation(move[id]));
-
-                while (psmove_tracker_enable(tracker, move[id]) != Tracker_CALIBRATED);
-                psmove_update_leds(move[id]);
-
-
-                psmove_tracker_update_image(tracker);
-                psmove_tracker_update(tracker, NULL);
-                psmove_tracker_annotate(tracker);
-
-                void *frame;
-                frame = psmove_tracker_get_frame(tracker);
-                if (frame) {
-                    cvShowImage("live camera feed", frame);
-                    cvWaitKey(1);
-                }
-
-
-                /*--------------------------------------------------------------------------------------*/
-                /*----------------------------ALIGN POINTER TO CAMERA-----------------------------------*/
-                /*--------------------------------------------------------------------------------------*/
-
-                ofLogNotice("ofxPSMoveReceiver") << "Center the move and press the move button\n";
-                int buttons;
-                while(!(buttons & Btn_MOVE)) {
-                    while (psmove_poll(move[id])){
-                        psmove_update_leds(move[id]);
-                    };
-                    buttons = psmove_get_buttons(move[id]);
-                }
-                while(buttons & Btn_MOVE) {
-                    while (psmove_poll(move[id])){
-                        psmove_update_leds(move[id]);
-                    };
-                    buttons = psmove_get_buttons(move[id]);
-                }
-                psmove_reset_orientation(move[id]);
-
-                psmove_set_leds(move[id], PSMOVE_LED_R, PSMOVE_LED_G, PSMOVE_LED_B);
-                psmove_update_leds(move[id]);
-                float xi, yi, zi;
-                ofLogNotice("ofxPSMoveReceiver") << "FRONT SCREEN: Point to upper left and press MOVE\n";
-                buttons = 0;
-                while(!(buttons & Btn_MOVE)) {
-                    while (psmove_poll(move[id])){
-                        psmove_update_leds(move[id]);
-                    };
-                    buttons = psmove_get_buttons(move[id]);
-                }
-                while(buttons & Btn_MOVE) {
-                    while (psmove_poll(move[id])){
-                        psmove_update_leds(move[id]);
-                    };
-                    buttons = psmove_get_buttons(move[id]);
-                }
-
-                getFrontIntersectionPoint(id, xi, yi, zi);
-                psmoveData[id].p11 = ofVec3f(xi,yi,zi);
-
-                psmove_update_leds(move[id]);
-
-                printf("FRONT SCREEN: Point to bottom right and press MOVE\n");
-                buttons = 0;
-                while(!(buttons & Btn_MOVE)) {
-                    while (psmove_poll(move[id])){
-                        psmove_update_leds(move[id]);
-                    };
-                    buttons = psmove_get_buttons(move[id]);
-                }
-                while(buttons & Btn_MOVE) {
-                    while (psmove_poll(move[id])){
-                        psmove_update_leds(move[id]);
-                    };
-                    buttons = psmove_get_buttons(move[id]);
-                }
-
-                getFrontIntersectionPoint(id, xi, yi, zi);
-                psmoveData[id].p12 = ofVec3f(xi,yi,zi);
-
-                psmove_update_leds(move[id]);
-                printf("Congratulations! You rocks! Very nice!\n");
-                printf("P11:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].p11.x, psmoveData[id].p11.y, psmoveData[id].p11.z);
-                printf("P12:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].p12.x, psmoveData[id].p12.y, psmoveData[id].p12.z);
-
-                // These points are points of the right plane (P12) and the left plane (P11)
-
-
-
-                /*--------------------------------------------------------------------------------------*/
-                /*--------------------------------------------------------------------------------------*/
-                /*--------------------------------------------------------------------------------------*/
-
-
             }
         }
     }
@@ -323,7 +324,6 @@ namespace ofxPSMove {
         glm::vec3 vo(0., 0., 1.);
 
         // Do the math
-        glm::vec3 direction;
         direction = 2.0f * dot(uq, vo) * uq
                     + (s*s - dot(uq, uq)) * vo
                     + 2.0f * s * cross(uq, vo);
