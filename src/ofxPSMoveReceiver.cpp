@@ -51,12 +51,10 @@ namespace ofxPSMove {
 //		    psmoveData.gyroscope.set(0);
 //		    psmoveData.magnetometer.set(0);
     }
-    Receiver::~Receiver()
-    {
+    Receiver::~Receiver() {
         for (int id=0; id<count; id++) {
             bSetup[id] = false;
-            if(move[id]!=NULL)
-            {
+            if(move[id]!=NULL) {
                 psmove_set_leds(move[id], 0,0,0);
                 psmove_update_leds(move[id]);
                 psmove_disconnect(move[id]);
@@ -66,27 +64,23 @@ namespace ofxPSMove {
         psmove_tracker_free(tracker);
         ofLog(OF_LOG_VERBOSE,"PSMove Disconnected\n");
     }
-    void Receiver::enable(){
+    void Receiver::enable() {
         //ofAddListener(ofEvents().update, this, &Receiver::update);
     }
 
-    void Receiver::disable(){
+    void Receiver::disable() {
         //ofRemoveListener(ofEvents().update, this, &Receiver::update);
     }
 
-    void Receiver::setup()
-    {
-
-
+    void Receiver::setup() {
         count = psmove_count_connected();
-        if(count<=0)
-        {
+        if (count<=0) {
             ofLogWarning("ofxPSMoveReceiver") << "None of the PSMove device found!!!";
         }
         bSetup.resize(count);
         move.resize(count);
         psmoveData.resize(count);
-        //    ofLog(OF_LOG_VERBOSE,"Connected controllers: %d\n", psmoveData.id);
+        // ofLog(OF_LOG_VERBOSE,"Connected controllers: %d\n", psmoveData.id);
 
         psmove_tracker_settings_set_default(&settings);
         settings.color_mapping_max_age = 0;
@@ -95,26 +89,20 @@ namespace ofxPSMove {
         tracker = psmove_tracker_new_with_settings(&settings);
         fusion = psmove_fusion_new(tracker, 1., 1000.);
 
-
-        if (!tracker)
-        {
+        if (!tracker) {
             ofLogError("ofxPSMoveReceiver") <<  "Could not init PSMoveTracker.\n";
             ofExit(1);
         }
 
         for (int id=0; id<count; id++) {
             move[id] = psmove_connect_by_id(id);
-
-
-
             if (move[id] == NULL) {
                 ofLogError("ofxPSMoveReceiver") << "Could not connect to default Move controller.\n"
                         "Please connect one via USB or Bluetooth.";
 
                 bSetup[id] = false;
             }
-            else
-            {
+            else {
                 int result;
                 for (;;) {
                     ofLogNotice("ofxPSMoveReceiver") << ("Calibrating controller %d...", id);
@@ -135,9 +123,8 @@ namespace ofxPSMove {
 
                 bSetup[id] = true;
             }
-            if(bSetup[id])
-            {
 
+            if(bSetup[id]) {
                 psmoveData[id].intrinsics = cv::cvarrToMat((CvMat*) cvLoad(psmove_util_get_file_path("intrinsics.xml"), 0, 0, 0));
 
                 char *serial = psmove_get_serial(move[id]);
@@ -157,9 +144,7 @@ namespace ofxPSMove {
                         break;
                 }
 
-                enum PSMove_Bool auto_update_leds =
-                        psmove_tracker_get_auto_update_leds(tracker,
-                                                            move[id]);
+                enum PSMove_Bool auto_update_leds = psmove_tracker_get_auto_update_leds(tracker, move[id]);
                 ofLogNotice("ofxPSMoveReceiver") << ("OK, auto_update_leds is %s\n",
                         (auto_update_leds == PSMove_True)?"enabled":"disabled");
 
@@ -181,8 +166,6 @@ namespace ofxPSMove {
                 assert(psmove_has_orientation(move[id]));
 
                 while (psmove_tracker_enable(tracker, move[id]) != Tracker_CALIBRATED);
-
-                //psmove_set_leds(move[id], PSMOVE_LED_R, PSMOVE_LED_G, PSMOVE_LED_B);
                 psmove_update_leds(move[id]);
 
 
@@ -198,6 +181,9 @@ namespace ofxPSMove {
                 }
 
 
+                /*--------------------------------------------------------------------------------------*/
+                /*----------------------------ALIGN POINTER TO CAMERA-----------------------------------*/
+                /*--------------------------------------------------------------------------------------*/
 
                 ofLogNotice("ofxPSMoveReceiver") << "Center the move and press the move button\n";
                 int buttons;
@@ -215,8 +201,14 @@ namespace ofxPSMove {
                 }
                 psmove_reset_orientation(move[id]);
 
-                psmove_set_leds(move[id], PSMOVE_LED_R, PSMOVE_LED_G, PSMOVE_LED_B);
                 psmove_update_leds(move[id]);
+
+
+                /*--------------------------------------------------------------------------------------*/
+                /*--------------------------------DETERMINE FRONT PANEL---------------------------------*/
+                /*--------------------------------------------------------------------------------------*/
+
+
                 float xi, yi, zi;
                 ofLogNotice("ofxPSMoveReceiver") << "FRONT SCREEN: Point to upper left and press MOVE\n";
                 buttons = 0;
@@ -233,12 +225,9 @@ namespace ofxPSMove {
                     buttons = psmove_get_buttons(move[id]);
                 }
 
-
-                //|| !getFrontIntersectionPoint(i, xi, yi, zi));
                 getFrontIntersectionPoint(id, xi, yi, zi);
                 psmoveData[id].p11 = ofVec3f(xi,yi,zi);
 
-                psmove_set_leds(move[id], PSMOVE_LED_R, PSMOVE_LED_G, PSMOVE_LED_B);
                 psmove_update_leds(move[id]);
 
                 printf("FRONT SCREEN: Point to bottom right and press MOVE\n");
@@ -256,22 +245,28 @@ namespace ofxPSMove {
                     buttons = psmove_get_buttons(move[id]);
                 }
 
-
                 getFrontIntersectionPoint(id, xi, yi, zi);
-                psmoveData[id].p12 = glm::vec3(xi,yi,zi);
+                psmoveData[id].p12 = ofVec3f(xi,yi,zi);
 
-                psmove_set_leds(move[id], PSMOVE_LED_R, PSMOVE_LED_G, PSMOVE_LED_B);
                 psmove_update_leds(move[id]);
                 printf("Congratulations! You rocks! Very nice!\n");
                 printf("P11:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].p11.x, psmoveData[id].p11.y, psmoveData[id].p11.z);
                 printf("P12:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].p12.x, psmoveData[id].p12.y, psmoveData[id].p12.z);
 
+                // These points are points of the right plane (P12) and the left plane (P11)
+
+
+
+                /*--------------------------------------------------------------------------------------*/
+                /*--------------------------------------------------------------------------------------*/
+                /*--------------------------------------------------------------------------------------*/
+
+
             }
         }
     }
 
-
-    bool Receiver::getFrontIntersectionPoint(int move_id, float& xi, float& yi, float& zi ){
+    void Receiver::getPositionAndOrientation(int move_id, float& xgl, float& ygl, float& zgl, glm::vec3& direction){
         // u,v - Coordinates of the controllers sphere and its radius
         float u,v,radius;
         psmove_tracker_get_position(tracker,move[move_id], &u, &v, &radius);
@@ -294,7 +289,7 @@ namespace ofxPSMove {
 
         // x,y,z -  Converted coordinates from tracker to general reference XYZ
         float x, y, z;
-        z = distance * cos(ax) * cos(ay); //  0.519; para pasar distancia real a gl dividir para esto
+        z = (float)distance * cos(ax) * cos(ay); //  0.519 para pasar distancia real a gl dividir para esto
         x = xz * z;//  2.45;
         y = yz * z;//  1.3;
 
@@ -303,19 +298,16 @@ namespace ofxPSMove {
 //     printf("ax: %f\t ay: %f\Nos ha llegado información de un uso que en algún caso se ha denegado dicha solicitud n", ax ,ay);
 
         // Coordinates in GL draw space
-        float xgl, ygl, zgl;
-        xgl = -x/2-0.25; // Fixed temp correction factor (FTCF)
-        ygl = y/2+0.25; // FTCF
+        xgl = (float)(-x/2-0.25); // Fixed temp correction factor (FTCF)
+        ygl = (float)(y/2+0.25); // FTCF
         zgl = -z;
 
 //     printf("GLSPACE: X: %f\t Y: %f\t Z: %f\n", xgl ,ygl ,zgl);
 
 
         float wq, xq, yq, zq;
-
         psmove_get_orientation(move[move_id], &wq, &xq, &yq, &zq);
         glm::quat q(wq, xq, yq, zq);
-        //psmove_fusion_get_position(m_fusion, m_moves[i], &x, &y, &z);
 
         // Extract the vector part of the quaternion
         glm::vec3 uq(q.x, q.y, q.z);
@@ -326,13 +318,17 @@ namespace ofxPSMove {
         glm::vec3 vo(0., 0., 1.);
 
         // Do the math
-        glm::vec3 direction;
         direction = 2.0f * dot(uq, vo) * uq
                     + (s*s - dot(uq, uq)) * vo
                     + 2.0f * s * cross(uq, vo);
+    }
 
-        cv::Vec3f n1(0.,0.,-1.);
-        cv::Vec3f c1(0,0,0);
+    bool Receiver::getFrontIntersectionPoint(int move_id, float& xi, float& yi, float& zi){
+        float xgl, ygl, zgl;
+        glm::vec3 direction;
+        getPositionAndOrientation(move_id, xgl, ygl, zgl, direction);
+        cv::Vec3f nf(0,0,-1);
+        cv::Vec3f cf(0,0,0);
         cv::Vec3f x0(xgl,ygl,zgl);
         cv::Vec3f v0(direction.x, direction.y, direction.z);
 
@@ -342,7 +338,55 @@ namespace ofxPSMove {
         //printf("GL0: X: %.2f\t Y: %.2f\t Z:%.2f\n", x0[0],x0[1],x0[2]);
         //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
 
-        bool intersect = linePlaneIntersection(n1,c1,x0,v0,vecIntersection, flFraction);
+        bool intersect = linePlaneIntersection(nf,cf,x0,v0,vecIntersection, flFraction);
+        // printf("INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
+        // printf("INTERSECT: K: %.2f\n", flFraction);
+
+        xi = vecIntersection[0];
+        yi = vecIntersection[1];
+        zi = vecIntersection[2];
+        return intersect;
+    }
+
+    bool Receiver::getLeftIntersectionPoint(int move_id, float& xi, float& yi, float& zi, cv::Vec3f cl){
+        float xgl, ygl, zgl;
+        glm::vec3 direction;
+        getPositionAndOrientation(move_id, xgl, ygl, zgl, direction);
+        cv::Vec3f nl(1,0,0);
+        cv::Vec3f x0(xgl,ygl,zgl);
+        cv::Vec3f v0(direction.x, direction.y, direction.z);
+
+        cv::Vec3f vecIntersection;
+        float flFraction;
+
+        //printf("GL0: X: %.2f\t Y: %.2f\t Z:%.2f\n", x0[0],x0[1],x0[2]);
+        //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
+
+        bool intersect = linePlaneIntersection(nl,cl,x0,v0,vecIntersection, flFraction);
+        // printf("INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
+        // printf("INTERSECT: K: %.2f\n", flFraction);
+
+        xi = vecIntersection[0];
+        yi = vecIntersection[1];
+        zi = vecIntersection[2];
+        return intersect;
+    }
+
+    bool Receiver::getRightIntersectionPoint(int move_id, float& xi, float& yi, float& zi, cv::Vec3f cr){
+        float xgl, ygl, zgl;
+        glm::vec3 direction;
+        getPositionAndOrientation(move_id, xgl, ygl, zgl, direction);
+        cv::Vec3f nr(-1,0,0);
+        cv::Vec3f x0(xgl,ygl,zgl);
+        cv::Vec3f v0(direction.x, direction.y, direction.z);
+
+        cv::Vec3f vecIntersection;
+        float flFraction;
+
+        //printf("GL0: X: %.2f\t Y: %.2f\t Z:%.2f\n", x0[0],x0[1],x0[2]);
+        //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
+
+        bool intersect = linePlaneIntersection(nr,cr,x0,v0,vecIntersection, flFraction);
         // printf("INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
         // printf("INTERSECT: K: %.2f\n", flFraction);
 
@@ -368,7 +412,7 @@ namespace ofxPSMove {
 
         flFraction = k;
 
-        return k >= 0;// && k <= 1;
+        return k >= 0;
     }
 
     //void Receiver::update(ofEventArgs & args)
@@ -604,6 +648,7 @@ namespace ofxPSMove {
         }
 
     }
+
     void Receiver::draw()
     {
 
