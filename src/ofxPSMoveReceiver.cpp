@@ -327,6 +327,16 @@ namespace ofxPSMove {
         direction = 2.0f * dot(uq, vo) * uq
                     + (s*s - dot(uq, uq)) * vo
                     + 2.0f * s * cross(uq, vo);
+
+        glm::quat camera_ang( 0.966, -0.259, 0., 0.);
+        s = camera_ang.w;
+        uq.x = camera_ang.x;
+        uq.y = camera_ang.y;
+        uq.z = camera_ang.z;
+
+        direction = 2.0f * dot(uq, direction) * uq
+                    + (s*s - dot(uq, uq)) * direction
+                    + 2.0f * s * cross(uq, direction);
     }
 
     bool Receiver::getFrontIntersectionPoint(int move_id, float& xi, float& yi, float& zi){
