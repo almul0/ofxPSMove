@@ -3,8 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
 	psMoveReceiver.setup();
-	ofxAddPSMoveListeners(this);
-    psMoveReceiver.setLedColor(0, 255,0,0);
+	//ofxAddPSMoveListeners(this);
     psMoveReceiver.startThread();
 
     right.load("./assets/right.jpg");

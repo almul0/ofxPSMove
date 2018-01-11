@@ -64,9 +64,8 @@ namespace ofxPSMove {
 		PSMoveTrackerSettings settings;
 		PSMoveTracker* tracker;
         	PSMoveFusion *fusion;
-		bool getFrontIntersectionPoint(int move_id, float& xi, float& yi, float& zi );
-		bool LinePlaneIntersection(const ofVec3f& n, const ofVec3f& c, const ofVec3f& x0, const ofVec3f& v, ofVec3f& vecIntersection, float& flFraction);
-
+        bool linePlaneIntersection(const cv::Vec3f& n, const cv::Vec3f& c, const cv::Vec3f& x0, const cv::Vec3f& v, cv::Vec3f& vecIntersection, float& flFraction);
+        bool getFrontIntersectionPoint(int move_id, float& xi, float& yi, float& zi );
 
 
 	};
