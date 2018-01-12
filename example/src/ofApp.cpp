@@ -5,6 +5,9 @@ void ofApp::setup(){
 	psMoveReceiver.setup();
 	ofxAddPSMoveListeners(this);
 
+
+    left.load("./assets/left.jpg");
+    front.load("./assets/front.jpg");
     right.load("./assets/right.jpg");
     lantern.load("./assets/reveal.png");
 }
@@ -22,7 +25,9 @@ void ofApp::update(ofEventArgs & args) {
 void ofApp::draw(){
     ofEnableAlphaBlending();
 
-    right.draw(0,0);
+    left.draw(0, 0);
+    front.draw(640, 0);
+    right.draw(1280,0);
     lantern.draw(cursor.x-(lantern.getWidth()/2),cursor.y-(lantern.getHeight()/2));
     ofDisableAlphaBlending();
 }
@@ -177,11 +182,9 @@ void ofApp::onPSMoved( ofxPSMove::EventArgs & psmoveEvent )
                             psmoveEvent.data->position.y,
                             psmoveEvent.data->position.z);*/
 
-
     cursor.x = psmoveEvent.data->position.x;
     cursor.y = psmoveEvent.data->position.y;
 }
 
 void ofApp::exit() {
-
 }

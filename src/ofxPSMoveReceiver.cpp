@@ -32,8 +32,8 @@
 #include "opencv2/core/core_c.h"
 #include "opencv2/highgui/highgui_c.h"
 
-#define VRES_WIDTH 1024
-#define VRES_HEIGHT 768
+#define VRES_WIDTH 640
+#define VRES_HEIGHT 480
 
 namespace ofxPSMove {
 
@@ -206,8 +206,12 @@ namespace ofxPSMove {
                     }
                     psmove_reset_orientation(move[id]);
 
-                    psmove_set_leds(move[id], PSMOVE_LED_R, PSMOVE_LED_G, PSMOVE_LED_B);
                     psmove_update_leds(move[id]);
+
+                    /*--------------------------------------------------------------------------------------*/
+                    /*--------------------------------DETERMINE FRONT PANEL---------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+
                     float xi, yi, zi;
                     ofLogNotice("ofxPSMoveReceiver") << "FRONT SCREEN: Point to upper left and press MOVE\n";
                     buttons = 0;
@@ -225,11 +229,11 @@ namespace ofxPSMove {
                     }
 
                     getFrontIntersectionPoint(id, xi, yi, zi);
-                    psmoveData[id].p11 = ofVec3f(xi, yi, zi);
+                    psmoveData[id].pfl = ofVec3f(xi, yi, zi);
+                    psmoveData[id].pfl = ofVec3f(-106, -70, 0);
 
-                    psmove_update_leds(move[id]);
 
-                    printf("FRONT SCREEN: Point to bottom right and press MOVE\n");
+                    ofLogNotice("ofxPSMoveReceiver") << "FRONT SCREEN: Point to bottom right and press MOVE\n";
                     buttons = 0;
                     while (!(buttons & Btn_MOVE)) {
                         while (psmove_poll(move[id])) {
@@ -245,18 +249,72 @@ namespace ofxPSMove {
                     }
 
                     getFrontIntersectionPoint(id, xi, yi, zi);
-                    psmoveData[id].p12 = ofVec3f(xi, yi, zi);
+                    psmoveData[id].pfr = ofVec3f(xi, yi, zi);
+                    psmoveData[id].pfr = ofVec3f(130, 140, 0);
 
-                    psmove_update_leds(move[id]);
+
+                    printf("PFL:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pfl.x, psmoveData[id].pfl.y,
+                           psmoveData[id].pfl.z);
+                    printf("PFR:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pfr.x, psmoveData[id].pfr.y,
+                           psmoveData[id].pfr.z);
+
+                    // These points are points of the right plane (PFR) and the left plane (PFL)
+
+                    /*--------------------------------------------------------------------------------------*/
+                    /*--------------------------------DETERMINE LEFT PANEL----------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+
+                    ofLogNotice("ofxPSMoveReceiver") << "LEFT SCREEN: Point to bottom left and press MOVE\n";
+                    buttons = 0;
+                    while (!(buttons & Btn_MOVE)) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+                    while (buttons & Btn_MOVE) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+
+                    getLeftIntersectionPoint(id, xi, yi, zi);
+                    psmoveData[id].pl = ofVec3f(xi, yi, zi);
+                    psmoveData[id].pl = ofVec3f(-106, 140, -220);
+
+
+                    printf("PL:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pl.x, psmoveData[id].pl.y,
+                           psmoveData[id].pl.z);
+
+                    /*--------------------------------------------------------------------------------------*/
+                    /*--------------------------------DETERMINE RIGHT PANEL---------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+
+                    ofLogNotice("ofxPSMoveReceiver") << "RIGHT SCREEN: Point to upper right and press MOVE\n";
+                    buttons = 0;
+                    while (!(buttons & Btn_MOVE)) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+                    while (buttons & Btn_MOVE) {
+                        while (psmove_poll(move[id])) {
+                            psmove_update_leds(move[id]);
+                        };
+                        buttons = psmove_get_buttons(move[id]);
+                    }
+
+                    getRightIntersectionPoint(id, xi, yi, zi);
+                    psmoveData[id].pr = ofVec3f(xi, yi, zi);
+                    psmoveData[id].pr = ofVec3f(130, -78, -220);
+
+                    printf("PR:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pr.x, psmoveData[id].pr.y,
+                           psmoveData[id].pr.z);
+
+
                     printf("Congratulations! You rocks! Very nice!\n");
-                    printf("P11:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].p11.x, psmoveData[id].p11.y,
-                           psmoveData[id].p11.z);
-                    printf("P12:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].p12.x, psmoveData[id].p12.y,
-                           psmoveData[id].p12.z);
-
-                    // These points are points of the right plane (P12) and the left plane (P11)
-
-
 
                     /*--------------------------------------------------------------------------------------*/
                     /*--------------------------------------------------------------------------------------*/
@@ -271,17 +329,23 @@ namespace ofxPSMove {
     void Receiver::getPositionAndOrientation(int move_id, float& xgl, float& ygl, float& zgl, glm::vec3& direction){
         // u,v - Coordinates of the controllers sphere and its radius
         float u,v,radius;
-        psmove_poll(move[move_id]);
+
+        psmove_tracker_update_image(tracker);
+        psmove_tracker_update(tracker, NULL);
+
+        while(psmove_poll(move[move_id]));
         psmove_tracker_get_position(tracker,move[move_id], &u, &v, &radius);
+        printf("TRACKER:\t U: %f\t, V: %f\t radius: %f\n", u,v);
 
         // Distance between camera and blob (Position vector modulus)
-        psmove_poll(move[move_id]);
+        while(psmove_poll(move[move_id]));
         double distance = psmove_tracker_distance_from_radius(tracker, radius);
 
 
         float wq, xq, yq, zq;
-        psmove_poll(move[move_id]);
+        while(psmove_poll(move[move_id]));
         psmove_get_orientation(move[move_id], &wq, &xq, &yq, &zq);
+
 
         // Convert double values to float
         psmoveData[move_id].intrinsics.convertTo(psmoveData[move_id].intrinsics,CV_32F);
@@ -327,7 +391,8 @@ namespace ofxPSMove {
         direction = 2.0f * dot(uq, vo) * uq
                     + (s*s - dot(uq, uq)) * vo
                     + 2.0f * s * cross(uq, vo);
-
+        direction.x = -direction.x;
+/*
         glm::quat camera_ang( 0.966, -0.259, 0., 0.);
         s = camera_ang.w;
         uq.x = camera_ang.x;
@@ -336,7 +401,7 @@ namespace ofxPSMove {
 
         direction = 2.0f * dot(uq, direction) * uq
                     + (s*s - dot(uq, uq)) * direction
-                    + 2.0f * s * cross(uq, direction);
+                    + 2.0f * s * cross(uq, direction);*/
     }
 
     bool Receiver::getFrontIntersectionPoint(int move_id, float& xi, float& yi, float& zi){
@@ -345,7 +410,11 @@ namespace ofxPSMove {
 
         getPositionAndOrientation(move_id, xgl, ygl, zgl, direction);
 
-        cv::Vec3f nf(0,0,-1);
+        printf("POS:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", xgl,ygl,zgl);
+        printf("DIR:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", direction.x, direction.y, direction.z);
+
+
+               cv::Vec3f nf(0,0,-1);
         cv::Vec3f cf(0,0,0);
         cv::Vec3f x0(xgl,ygl,zgl);
         cv::Vec3f v0(direction.x, direction.y, direction.z);
@@ -357,7 +426,7 @@ namespace ofxPSMove {
         //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
 
         bool intersect = linePlaneIntersection(nf,cf,x0,v0,vecIntersection, flFraction);
-        //printf("INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
+        //printf("FRONT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
         // printf("INTERSECT: K: %.2f\n", flFraction);
 
         xi = vecIntersection[0];
@@ -366,11 +435,12 @@ namespace ofxPSMove {
         return intersect;
     }
 
-    bool Receiver::getLeftIntersectionPoint(int move_id, float& xi, float& yi, float& zi, cv::Vec3f cl){
+    bool Receiver::getLeftIntersectionPoint(int move_id, float& xi, float& yi, float& zi){
         float xgl, ygl, zgl;
         glm::vec3 direction;
         getPositionAndOrientation(move_id, xgl, ygl, zgl, direction);
-        cv::Vec3f nl(1,0,0);
+        cv::Vec3f nl(-1,0,0);
+        cv::Vec3f cl(psmoveData[move_id].pfl.x,psmoveData[move_id].pfl.y,psmoveData[move_id].pfl.z);
         cv::Vec3f x0(xgl,ygl,zgl);
         cv::Vec3f v0(direction.x, direction.y, direction.z);
 
@@ -381,7 +451,7 @@ namespace ofxPSMove {
         //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
 
         bool intersect = linePlaneIntersection(nl,cl,x0,v0,vecIntersection, flFraction);
-        // printf("INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
+        printf("LEFT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
         // printf("INTERSECT: K: %.2f\n", flFraction);
 
         xi = vecIntersection[0];
@@ -390,11 +460,12 @@ namespace ofxPSMove {
         return intersect;
     }
 
-    bool Receiver::getRightIntersectionPoint(int move_id, float& xi, float& yi, float& zi, cv::Vec3f cr){
+    bool Receiver::getRightIntersectionPoint(int move_id, float& xi, float& yi, float& zi){
         float xgl, ygl, zgl;
         glm::vec3 direction;
         getPositionAndOrientation(move_id, xgl, ygl, zgl, direction);
-        cv::Vec3f nr(-1,0,0);
+        cv::Vec3f nr(1,0,0);
+        cv::Vec3f cr(psmoveData[move_id].pfr.x,psmoveData[move_id].pfr.y,psmoveData[move_id].pfr.z);
         cv::Vec3f x0(xgl,ygl,zgl);
         cv::Vec3f v0(direction.x, direction.y, direction.z);
 
@@ -405,7 +476,7 @@ namespace ofxPSMove {
         //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
 
         bool intersect = linePlaneIntersection(nr,cr,x0,v0,vecIntersection, flFraction);
-        // printf("INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
+        printf("RIGHT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
         // printf("INTERSECT: K: %.2f\n", flFraction);
 
         xi = vecIntersection[0];
@@ -433,17 +504,37 @@ namespace ofxPSMove {
         return k >= 0;// && k <= 1;
     }
 
+    void Receiver::frontPointToPixel(int id, float x, float y, int& xv, int& yv) {
+        xv = (int) floor((x - psmoveData[id].pfl.x) * VRES_WIDTH /
+                         abs(psmoveData[id].pfr.x - psmoveData[id].pfl.x));
+        xv += VRES_WIDTH;
+        yv = (int) floor((y - psmoveData[id].pfl.y) * VRES_HEIGHT /
+                         abs(psmoveData[id].pfr.y - psmoveData[id].pfl.y));
+    }
+
+    void Receiver::leftPointToPixel(int id, float z, float y, int& xv, int& yv) {
+        xv = (int) floor((z - psmoveData[id].pl.z) * VRES_WIDTH /
+                         abs(psmoveData[id].pfl.z - psmoveData[id].pl.z));
+        yv = (int) floor((y - psmoveData[id].pfl.y) * VRES_HEIGHT /
+                         abs(psmoveData[id].pfl.y - psmoveData[id].pl.y));
+    }
+
+    void Receiver::rightPointToPixel(int id, float z, float y, int& xv, int& yv) {
+        xv = (int) floor((-z - psmoveData[id].pr.z) * VRES_WIDTH /
+                         abs(psmoveData[id].pfr.z - psmoveData[id].pr.z));
+        xv += VRES_WIDTH;
+        yv = (int) floor((y - psmoveData[id].pr.y) * VRES_HEIGHT /
+                         abs(psmoveData[id].pfr.y - psmoveData[id].pr.y));
+    }
+
     void Receiver::update(ofEventArgs & args) {
-
-        // start
-
-        for (int id = 0; id < count; id++) {
-            if (bSetup[id]) {
-                int btn = psmove_get_buttons(move[id]);
-                EventArgs args;
-                psmoveData[id].id = id;
-                args.data = &psmoveData[id];
-                if(psmove_poll(move[id])){
+            for (int id = 0; id < count; id++) {
+                if (bSetup[id]) {
+                    int btn = psmove_get_buttons(move[id]);
+                    EventArgs args;
+                    psmoveData[id].id = id;
+                    args.data = &psmoveData[id];
+                    if (psmove_poll(move[id])) {
                         //    Btn_TRIANGLE = 1 << 0x04, /*!< Green triangle */
                         //    Btn_CIRCLE = 1 << 0x05, /*!< Red circle */
                         //    Btn_CROSS = 1 << 0x06, /*!< Blue cross */
@@ -464,7 +555,7 @@ namespace ofxPSMove {
                         if ((psmove_get_buttons(move[id]) & Btn_TRIANGLE) && !psmoveData[id].BTN_TRIANGLE) {
                             psmoveData[id].BTN_TRIANGLE = true;
                             ofNotifyEvent(Events().buttonTrianglePressed, args, this);
-                        } else if (psmoveData[id].BTN_TRIANGLE){
+                        } else if (psmoveData[id].BTN_TRIANGLE) {
                             psmoveData[id].BTN_TRIANGLE = false;
                             ofNotifyEvent(Events().buttonTriangleReleased, args, this);
                         }
@@ -479,14 +570,14 @@ namespace ofxPSMove {
                         if (psmove_get_buttons(move[id]) & Btn_CROSS && !psmoveData[id].BTN_CROSS) {
                             psmoveData[id].BTN_CROSS = true;
                             ofNotifyEvent(Events().buttonCrossPressed, args, this);
-                        } else if (psmoveData[id].BTN_CROSS){
+                        } else if (psmoveData[id].BTN_CROSS) {
                             psmoveData[id].BTN_CROSS = false;
                             ofNotifyEvent(Events().buttonCrossReleased, args, this);
                         }
                         if (psmove_get_buttons(move[id]) & Btn_SQUARE) {
                             psmoveData[id].BTN_SQUARE = true;
                             ofNotifyEvent(Events().buttonSquarePressed, args, this);
-                        } else if (psmoveData[id].BTN_SQUARE){
+                        } else if (psmoveData[id].BTN_SQUARE) {
                             psmoveData[id].BTN_SQUARE = false;
                             ofNotifyEvent(Events().buttonSquareReleased, args, this);
                         }
@@ -555,44 +646,57 @@ namespace ofxPSMove {
                             psmoveData[id].temperature = psmove_get_temperature(move[id]);
                             ofNotifyEvent(Events().temperatureUpdated, args, this);
                         }
-                }
+                    }
 
-                psmove_tracker_update_image(tracker);
-                psmove_tracker_update(tracker, NULL);
-                //psmove_tracker_annotate(tracker);
-
-                float w, x, y, z;
-                //psmove_tracker_get_position(tracker, move[id], &x, &y, &z);
-                getFrontIntersectionPoint(id, x, y, z);
-
-                //printf("INTERSECTIONX:\t %f\tINTERSECTIONY: %f\n",x,y);
-
-                int xv, yv;
-                xv = (int)floor(abs(x - psmoveData[id].p11.x) * VRES_WIDTH / abs(psmoveData[id].p12.x-psmoveData[id].p11.x));
-                yv = (int)floor(abs(y - psmoveData[id].p11.y) * VRES_HEIGHT / abs(psmoveData[id].p12.y-psmoveData[id].p11.y));
+                    psmove_tracker_update_image(tracker);
+                    psmove_tracker_update(tracker, NULL);
+                    psmove_tracker_annotate(tracker);
+                    void* frame;
+                    frame = psmove_tracker_get_frame(tracker);
+                    if (frame) {
+                        cvShowImage("live camera feed", frame);
+                        cvWaitKey(1);
+                    }
 
 
+                    float x, y, z;
+                    int xv, yv;
+                    bool front_int = getFrontIntersectionPoint(id, x, y, z);
+                    frontPointToPixel(id, x, y, xv, yv);
+                    if ( front_int && x < psmoveData[id].pfl.x ) {
+                        getLeftIntersectionPoint(id, x, y, z);
+                        leftPointToPixel(id, z, y, xv, yv);
+                    } else if ( front_int && x > psmoveData[id].pfr.x) {
+                        getRightIntersectionPoint(id, x, y, z);
+                        rightPointToPixel(id, z, y, xv, yv);
+                    } else if (!front_int && getLeftIntersectionPoint(id, x, y, z)) {
+                        leftPointToPixel(id, z, y, xv, yv);
+                    } else if (!front_int && getRightIntersectionPoint(id, x, y, z)) {
+                        rightPointToPixel(id, z, y, xv, yv);
+                    }
+                    //printf("INTERSECTIONX:\t %f\tINTERSECTIONY: %f\n",x,y);
 
-                if (xv < 0) {
-                    xv = 0;
-                } else if (xv > VRES_WIDTH) {
-                    xv = VRES_WIDTH;
-                }
+                    if (xv < 0) {
+                        xv = 0;
+                    } else if (xv > 3*VRES_WIDTH) {
+                        xv = 3*VRES_WIDTH;
+                    }
 
-                if (yv < 0) {
-                    yv = 0;
-                } else if (yv > VRES_HEIGHT) {
-                    yv = VRES_HEIGHT;
-                }
+                    if (yv < 0) {
+                        yv = 0;
+                    } else if (yv > VRES_HEIGHT) {
+                        yv = VRES_HEIGHT;
+                    }
 
-                psmoveData[id].position.set(xv, yv, z);
-                ofNotifyEvent( Events().moved,args,this);
+                    psmoveData[id].position.set(xv, yv, z);
+
+                    ofNotifyEvent(Events().moved, args, this);
 
 
-                //printf("CURSORX:\t %d\tCURSORY: %d\n",xv,yv);
+                    //printf("CURSORX:\t %d\tCURSORY: %d\n",xv,yv);
 
-                //psmove_get_orientation(move[id], &w, &x, &y, &z);
-                //psmoveData[id].orientation.set(x, y, z, w);
+                    //psmove_get_orientation(move[id], &w, &x, &y, &z);
+                    //psmoveData[id].orientation.set(x, y, z, w);
 
 
                     /*if (ctype != Conn_USB && !(psmove_get_buttons(move) & Btn_PS)) {
@@ -645,10 +749,9 @@ namespace ofxPSMove {
                  psmove_update_leds(move);
                  }
                  }*/
-                //				ofNotifyEvent( Event().PSMoveEvent,psmoveData[id],this);
+                    //				ofNotifyEvent( Event().PSMoveEvent,psmoveData[id],this);
+                }
             }
-        }
-
     }
     void Receiver::draw()
     {

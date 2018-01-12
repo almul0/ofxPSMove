@@ -13,7 +13,7 @@ namespace ofxPSMove {
 		ofVec3f accelerometer , gyroscope , magnetometer, position;
         ofVec4f orientation;
         cv::Mat intrinsics;
-        ofVec3f p11, p12;
+        ofVec3f pfl, pfr, pl, pr;
 		bool BTN_TRIANGLE
 		,BTN_CIRCLE
 		,BTN_CROSS

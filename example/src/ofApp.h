@@ -25,6 +25,8 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 	ofxPSMove::Receiver psMoveReceiver;
 
+    ofImage left;
+    ofImage front;
     ofImage right;
     ofImage lantern;
     ofPoint cursor;
