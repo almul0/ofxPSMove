@@ -17,10 +17,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a12fd4e3-d83a-466b-8d02-d5d21a4804b8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp.orig" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/example/src/ofApp.cpp" afterPath="$PROJECT_DIR$/example/src/ofApp.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp" afterPath="$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ofxPSMoveReceiver.h" afterPath="$PROJECT_DIR$/src/ofxPSMoveReceiver.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,46 +31,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <file leaf-file-name="ofxPSMoveReceiver.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="15" column="53" lean-forward="false" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
+            <state relative-caret-position="714">
+              <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ofxPSMoveReceiver.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.h">
+      <file leaf-file-name="ofxPSMoveReceiver.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+            <state relative-caret-position="416">
+              <caret line="623" column="50" lean-forward="true" selection-start-line="623" selection-start-column="50" selection-end-line="623" selection-end-column="50" />
               <folding>
-                <element signature="e#1540#1559#0" expanded="true" />
+                <element signature="e#1467#1489#0" expanded="true" />
+                <marker date="1515740124503" expanded="true" signature="2619:9624" ph="{...}" />
+                <marker date="1515740124503" expanded="true" signature="22309:33464" ph="{...}" />
+                <marker date="1515740124503" expanded="true" signature="30285:33464" ph="{...}" />
+                <marker date="1515740124503" expanded="true" signature="31203:33343" ph="/.../" />
+                <marker date="1515740124503" expanded="true" signature="33495:33503" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ofxPSMoveReceiver.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp">
+      <file leaf-file-name="psmove.h" pinned="false" current-in-tab="false">
+        <entry file="file:///opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include/psmove.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="363" column="35" lean-forward="true" selection-start-line="363" selection-start-column="35" selection-end-line="363" selection-end-column="35" />
-              <folding>
-                <element signature="e#1467#1489#0" expanded="true" />
-                <marker date="1515602858200" expanded="true" signature="1633:22377" ph="{...}" />
-                <marker date="1515602858200" expanded="true" signature="2305:2309" ph="{...}" />
-                <marker date="1515602858200" expanded="true" signature="2406:2470" ph="{...}" />
-                <marker date="1515602858200" expanded="true" signature="2498:8495" ph="{...}" />
-                <marker date="1515602858200" expanded="true" signature="8589:11610" ph="{...}" />
-                <marker date="1515602858200" expanded="true" signature="11775:12127" ph="{...}" />
-                <marker date="1515602858200" expanded="true" signature="12212:22142" ph="{...}" />
-                <marker date="1515602858200" expanded="true" signature="20402:22011" ph="/.../" />
-                <marker date="1515602858200" expanded="true" signature="22167:22174" ph="{...}" />
-                <marker date="1515602858200" expanded="true" signature="22236:22375" ph="{...}" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="87" column="4" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ofxPSMoveData.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ofxPSMoveData.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,70 +81,28 @@
       <file leaf-file-name="ofApp.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/src/ofApp.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2783">
-              <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+            <state relative-caret-position="-1173">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ofApp.h" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ofApp.h" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/src/ofApp.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+            <state relative-caret-position="-163">
+              <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ofxPSMoveReceiver.cpp" pinned="false" current-in-tab="true">
-        <entry file="file:///opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.cpp">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="68" column="10" lean-forward="false" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ofThread.cpp" pinned="false" current-in-tab="false">
-        <entry file="file:///opt/openframeworks/libs/openFrameworks/utils/ofThread.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ofxPSMoveReceiver.h" pinned="false" current-in-tab="false">
-        <entry file="file:///opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-143">
-              <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
-              <folding>
-                <marker date="1515602693226" expanded="true" signature="1812:2532" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ofxPSMoveEvent.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ofxPSMoveEvent.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ofxPSMoveEvent.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ofxPSMoveEvent.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="646">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -153,7 +113,19 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>exit</find>
+      <find>Trigg</find>
+      <find>p12</find>
+      <find>pl</find>
+      <find>72.</find>
+      <find>ofLo</find>
+      <find>RIGH</find>
+      <find>) ) {</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>pfr</replace>
+      <replace>) {</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -162,17 +134,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ofxPSMoveTracker.h" />
-        <option value="$PROJECT_DIR$/src/ofxPSMoveData.h" />
         <option value="$PROJECT_DIR$/src/ofxPSMove.h" />
         <option value="$PROJECT_DIR$/src/ofxPSMoveEvent.h" />
         <option value="$PROJECT_DIR$/example/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.h" />
+        <option value="/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveData.h" />
+        <option value="$PROJECT_DIR$/src/ofxPSMoveData.h" />
         <option value="$PROJECT_DIR$/example/src/main.cpp" />
         <option value="$PROJECT_DIR$/example/src/ofApp.h" />
-        <option value="/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.h" />
-        <option value="$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp" />
+        <option value="$PROJECT_DIR$/src/ofxPSMoveReceiver.h" />
         <option value="$PROJECT_DIR$/example/src/ofApp.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="/opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.cpp" />
+        <option value="$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp" />
         <option value="$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp" />
       </list>
     </option>
@@ -185,10 +159,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="459" />
-    <option name="y" value="217" />
-    <option name="width" value="1024" />
-    <option name="height" value="555" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -246,6 +218,7 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/example" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/almul0/Projects/ofxPSMove/src/ofxPSMoveReceiver.cpp" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -313,23 +286,37 @@
       <workItem from="1511639668983" duration="21000" />
       <workItem from="1515600046102" duration="3615000" />
       <workItem from="1515661611502" duration="19327000" />
+      <workItem from="1515694376742" duration="2191000" />
+      <workItem from="1515709354844" duration="19879000" />
+      <workItem from="1515731264329" duration="2036000" />
+      <workItem from="1515733417040" duration="6452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9747000" />
+    <option name="totallyTimeSpent" value="40305000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19561933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.330033" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1996805" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32592592" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20952381" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25346112" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -342,6 +329,27 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.330033" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838285" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19561933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25377643" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -351,28 +359,22 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding>
-            <element signature="e#1540#1559#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6171">
           <caret line="363" column="35" lean-forward="true" selection-start-line="363" selection-start-column="35" selection-end-line="363" selection-end-column="35" />
           <folding>
-            <marker date="1515692813204" expanded="true" signature="2420:2430" ph="{...}" />
-            <marker date="1515692813204" expanded="true" signature="2538:2605" ph="{...}" />
+            <element signature="e#1467#1489#0" expanded="true" />
+            <marker date="1515740124503" expanded="true" signature="2619:9624" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="22309:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="30285:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="31203:33343" ph="/.../" />
+            <marker date="1515740124503" expanded="true" signature="33495:33503" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -397,7 +399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1275">
           <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -421,15 +422,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1156">
-          <caret line="68" column="10" lean-forward="false" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -445,9 +437,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="21" lean-forward="true" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="21" />
-          <folding>
-            <element signature="e#1540#1559#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -463,8 +453,12 @@
         <state relative-caret-position="2958">
           <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding>
-            <marker date="1515692813204" expanded="true" signature="2420:2430" ph="{...}" />
-            <marker date="1515692813204" expanded="true" signature="2538:2605" ph="{...}" />
+            <element signature="e#1467#1489#0" expanded="true" />
+            <marker date="1515740124503" expanded="true" signature="2619:9624" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="22309:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="30285:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="31203:33343" ph="/.../" />
+            <marker date="1515740124503" expanded="true" signature="33495:33503" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -481,7 +475,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,9 +490,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <element signature="e#1540#1559#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -522,7 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -532,16 +522,11 @@
           <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding>
             <element signature="e#1467#1489#0" expanded="true" />
-            <marker date="1515602858200" expanded="true" signature="1633:22377" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2305:2309" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2406:2470" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2498:8495" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="8589:11610" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="11775:12127" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="12212:22142" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="20402:22011" ph="/.../" />
-            <marker date="1515602858200" expanded="true" signature="22167:22174" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="22236:22375" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="2619:9624" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="22309:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="30285:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="31203:33343" ph="/.../" />
+            <marker date="1515740124503" expanded="true" signature="33495:33503" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -554,16 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="31" lean-forward="false" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <element signature="e#1540#1559#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ofxPSMove.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -583,7 +558,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -593,16 +567,11 @@
           <caret line="174" column="0" lean-forward="false" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
           <folding>
             <element signature="e#1467#1489#0" expanded="true" />
-            <marker date="1515602858200" expanded="true" signature="1633:22377" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2305:2309" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2406:2470" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2498:8495" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="8589:11610" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="11775:12127" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="12212:22142" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="20402:22011" ph="/.../" />
-            <marker date="1515602858200" expanded="true" signature="22167:22174" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="22236:22375" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="2619:9624" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="22309:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="30285:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="31203:33343" ph="/.../" />
+            <marker date="1515740124503" expanded="true" signature="33495:33503" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -628,34 +597,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveData.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ofxPSMoveTracker.h" />
-    <entry file="file:///opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include/psmove.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1744">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ofxPSMove.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveEvent.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,15 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="312" column="17" lean-forward="false" selection-start-line="312" selection-start-column="17" selection-end-line="312" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,9 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="36" lean-forward="false" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <element signature="e#77#104#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="985" column="8" lean-forward="false" selection-start-line="985" selection-start-column="8" selection-end-line="985" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -704,33 +637,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveEvent.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="53" lean-forward="false" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file:///opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="65" column="38" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <marker date="1515602693226" expanded="true" signature="1812:2532" ph="{...}" />
-          </folding>
+        <state relative-caret-position="833">
+          <caret line="49" column="22" lean-forward="false" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -738,31 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
           <caret line="110" column="4" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include/psmove_tracker.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/example/src/ofApp.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2783">
-          <caret line="183" column="0" lean-forward="false" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///opt/openframeworks/libs/openFrameworks/utils/ofThread.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -770,37 +659,121 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1393">
           <caret line="276" column="15" lean-forward="true" selection-start-line="276" selection-start-column="15" selection-end-line="276" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/openframeworks/libs/openFrameworks/utils/ofThread.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="9" lean-forward="false" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveEvent.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveEvent.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include/psmove_tracker.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1733">
+          <caret line="594" column="8" lean-forward="false" selection-start-line="594" selection-start-column="8" selection-end-line="594" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="18" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/openframeworks/addons/ofxPSMove/src/ofxPSMoveReceiver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="313" column="30" lean-forward="false" selection-start-line="313" selection-start-column="30" selection-end-line="313" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///opt/openframeworks/addons/ofxPSMove/libs/psmoveapi/include/psmove.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="87" column="4" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="623" column="50" lean-forward="true" selection-start-line="623" selection-start-column="50" selection-end-line="623" selection-end-column="50" />
+          <folding>
+            <element signature="e#1467#1489#0" expanded="true" />
+            <marker date="1515740124503" expanded="true" signature="2619:9624" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="22309:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="30285:33464" ph="{...}" />
+            <marker date="1515740124503" expanded="true" signature="31203:33343" ph="/.../" />
+            <marker date="1515740124503" expanded="true" signature="33495:33503" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/src/ofApp.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1173">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example/src/ofApp.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="51" column="32" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
-          <folding>
-            <element signature="e#1540#1559#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ofxPSMoveReceiver.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="363" column="35" lean-forward="true" selection-start-line="363" selection-start-column="35" selection-end-line="363" selection-end-column="35" />
-          <folding>
-            <element signature="e#1467#1489#0" expanded="true" />
-            <marker date="1515602858200" expanded="true" signature="1633:22377" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2305:2309" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2406:2470" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="2498:8495" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="8589:11610" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="11775:12127" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="12212:22142" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="20402:22011" ph="/.../" />
-            <marker date="1515602858200" expanded="true" signature="22167:22174" ph="{...}" />
-            <marker date="1515602858200" expanded="true" signature="22236:22375" ph="{...}" />
-          </folding>
+        <state relative-caret-position="-163">
+          <caret line="3" column="2" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

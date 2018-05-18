@@ -230,7 +230,6 @@ namespace ofxPSMove {
 //
 //                    getFrontIntersectionPoint(id, xi, yi, zi);
 //                    psmoveData[id].pfl = ofVec3f(xi, yi, zi);
-                    psmoveData[id].pfl = ofVec3f(-106, -70, 0);
 
 
 //                    ofLogNotice("ofxPSMoveReceiver") << "FRONT SCREEN: Point to bottom right and press MOVE\n";
@@ -250,14 +249,30 @@ namespace ofxPSMove {
 //
 //                    getFrontIntersectionPoint(id, xi, yi, zi);
 //                    psmoveData[id].pfr = ofVec3f(xi, yi, zi);
+                    psmoveData[id].pfl = ofVec3f(-106, -70, 0);
                     psmoveData[id].pfr = ofVec3f(130, 140, 0);
+                    psmoveData[id].pl = ofVec3f(-106, 140, -220);
+                    psmoveData[id].pr = ofVec3f(130, -78, -220);
 
+
+//                    psmoveData[id].pfl = ofVec3f(-23, -10, 0);
+//                    psmoveData[id].pfr = ofVec3f(9, 5.26, 0);
+//                    psmoveData[id].pl = ofVec3f(-23, 5.69, -195.5);
+//                    psmoveData[id].pr = ofVec3f(9, -27.3, -220);
+//
+//                    psmoveData[id].pfl = ofVec3f(-110, -50, 0);
+//                    psmoveData[id].pfr = ofVec3f(110, 160, 0);
+//                    psmoveData[id].pl = ofVec3f(-110, 160, -140);
+//                    psmoveData[id].pr = ofVec3f(110, -50, -140);
 
                     printf("PFL:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pfl.x, psmoveData[id].pfl.y,
                            psmoveData[id].pfl.z);
                     printf("PFR:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pfr.x, psmoveData[id].pfr.y,
                            psmoveData[id].pfr.z);
-
+                    printf("PL:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pl.x, psmoveData[id].pl.y,
+                           psmoveData[id].pl.z);
+                    printf("PR:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pr.x, psmoveData[id].pr.y,
+                           psmoveData[id].pr.z);
                     // These points are points of the right plane (PFR) and the left plane (PFL)
 
                     /*--------------------------------------------------------------------------------------*/
@@ -281,11 +296,7 @@ namespace ofxPSMove {
 //
 //                    getLeftIntersectionPoint(id, xi, yi, zi);
 //                    psmoveData[id].pl = ofVec3f(xi, yi, zi);
-                    psmoveData[id].pl = ofVec3f(-106, 140, -220);
 
-
-                    printf("PL:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pl.x, psmoveData[id].pl.y,
-                           psmoveData[id].pl.z);
 
                     /*--------------------------------------------------------------------------------------*/
                     /*--------------------------------DETERMINE RIGHT PANEL---------------------------------*/
@@ -308,10 +319,7 @@ namespace ofxPSMove {
 //
 //                    getRightIntersectionPoint(id, xi, yi, zi);
 //                    psmoveData[id].pr = ofVec3f(xi, yi, zi);
-                    psmoveData[id].pr = ofVec3f(130, -78, -220);
 
-                    printf("PR:\t X: %.2f\t, Y: %.2f\t Z: %.2f\n", psmoveData[id].pr.x, psmoveData[id].pr.y,
-                           psmoveData[id].pr.z);
 
 
                     printf("Congratulations! You rocks! Very nice!\n");
@@ -426,7 +434,7 @@ namespace ofxPSMove {
         //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
 
         bool intersect = linePlaneIntersection(nf,cf,x0,v0,vecIntersection, flFraction);
-        //printf("FRONT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
+//        printf("FRONT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
         // printf("INTERSECT: K: %.2f\n", flFraction);
 
         xi = vecIntersection[0];
@@ -451,7 +459,7 @@ namespace ofxPSMove {
         //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
 
         bool intersect = linePlaneIntersection(nl,cl,x0,v0,vecIntersection, flFraction);
-        //printf("LEFT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
+//        printf("LEFT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
         // printf("INTERSECT: K: %.2f\n", flFraction);
 
         xi = vecIntersection[0];
@@ -476,7 +484,7 @@ namespace ofxPSMove {
         //printf("GL1: X: %.2f\t Y: %.2f\t Z:%.2f\n", x1[0],x1[1],x1[2]);
 
         bool intersect = linePlaneIntersection(nr,cr,x0,v0,vecIntersection, flFraction);
-        //printf("RIGHT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
+//        printf("RIGHT INTERSECT: X: %.2f\t Y: %.2f\t Z:%.2f\n", vecIntersection[0],vecIntersection[1],vecIntersection[2]);
         // printf("INTERSECT: K: %.2f\n", flFraction);
 
         xi = vecIntersection[0];
@@ -660,12 +668,12 @@ namespace ofxPSMove {
                     psmove_tracker_update_image(tracker);
                     psmove_tracker_update(tracker, NULL);
                     psmove_tracker_annotate(tracker);
-                    void* frame;
-                    frame = psmove_tracker_get_frame(tracker);
-                    if (frame) {
-                        cvShowImage("live camera feed", frame);
-                        cvWaitKey(1);
-                    }
+//                    void* frame;
+//                    frame = psmove_tracker_get_frame(tracker);
+//                    if (frame) {
+//                        cvShowImage("live camera feed", frame);
+//                        cvWaitKey(1);
+//                    }
 
 
                     float x, y, z;
